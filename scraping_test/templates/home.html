@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="jumbotron">
+  <div class="container text-center">
+    <h2>Enter Twitter URL</h2>
+    
+    {% if state == "0" %}
+        <script>alert("Please enter url.")</script>
+    {% endif %}
+    
+    
+    <form method="POST" action="/twitter/">
+    {% csrf_token %}
+    <input class="form-control" type="text" name="twitter_url" id="twitter_url" /><br>
+    <button type="submit" class="btn btn-primary" >Submit</button>
+    </form>
+    
+    {% if message %}
+        <br>Twitter Handle: <span class="label label-primary">{{handle}}</span>
+        <br>Twitter Name: <span class="label label-primary">{{name}}</span>
+        <br>Follower: <span class="label label-primary">{{message}}</span>
+    {% endif %}
+    
+  </div>
+</div>
+
+{% endblock %}
+
