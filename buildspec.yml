@@ -1,14 +1,17 @@
 version: 0.1
 
+env:
+  secrets-manager:
+    PASSWORD: $SECRETS_ID:password
+
+
 phases:
   install:
     commands:
       - echo Installing code...
-  secrets-manager:
-    password: secret-id:password
   post_build:
     commands:
-      - echo Performing Test with 'password'
+      - echo Performing Test with $PASSWORD
 artifacts:
   files:
     - '**/*'
