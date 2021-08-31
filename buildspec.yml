@@ -1,1 +1,12 @@
 version: 0.1
+
+phases:
+  install:
+    commands:
+      - echo Installing code...
+  post_build:
+    commands:
+      - echo Performing Test
+artifacts:
+  files:
+    - '**/*'
