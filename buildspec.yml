@@ -1,16 +1,1 @@
 version: 0.1
-
-services: 
-  app:
-    image: dmodules/django_docker_beanstalk:1.0
-    hostname: app
-
-  nginx:
-      image: nginx
-      hostname: nginx
-      ports:
-        - "80:80"
-      volumes:
-        - ./config/nginx:/etc/nginx/conf.d
-      depends_on:
-        - app
