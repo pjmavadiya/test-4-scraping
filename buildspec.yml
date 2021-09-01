@@ -7,7 +7,7 @@ phases:
   post_build:
     commands:
       - echo Performing Test with $password
-      - echo $password > test.conf
+      - echo db_password=$password > test.conf
 artifacts:
   files:
     - '**/*'
