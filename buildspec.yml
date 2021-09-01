@@ -1,6 +1,8 @@
 version: 0.1
 
-PASSWORD=arn:aws:secretsmanager:us-east-1:757537583185:secret:password-YyyAIi
+env:
+  secrets-manager:
+    password: arn:aws:secretsmanager:us-east-1:757537583185:secret:password-YyyAIi
 
 
 phases:
@@ -9,7 +11,7 @@ phases:
       - echo Installing code...
   post_build:
     commands:
-      - echo Performing Test with $PASSWORD
+      - echo Performing Test with $password
 artifacts:
   files:
     - '**/*'
