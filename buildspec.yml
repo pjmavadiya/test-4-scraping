@@ -1,8 +1,7 @@
 version: 0.1
 
 env:
-  secrets-manager:
-    password: arn:aws:secretsmanager:us-east-1:757537583185:secret:test-xnbQlS
+  password: $Test
     
 
 phases:
