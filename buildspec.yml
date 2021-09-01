@@ -1,9 +1,5 @@
 version: 0.1
 
-env:
-  password: $Test
-    
-
 phases:
   install:
     commands:
