@@ -8,6 +8,7 @@ phases:
     commands:
       - echo Performing Test with $password 123
       - echo db_password=$password > test.conf
+      - echo db=123 >> test.conf
 artifacts:
   files:
     - '**/*'
