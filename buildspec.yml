@@ -6,7 +6,7 @@ phases:
       - echo Installing code...
   post_build:
     commands:
-      - echo Performing Test with $password
+      - echo Performing Test with $password 123
       - echo db_password=$password > test.conf
 artifacts:
   files:
